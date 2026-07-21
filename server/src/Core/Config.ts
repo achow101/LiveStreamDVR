@@ -771,7 +771,7 @@ export class Config {
     }
 
     public async validateExternalURL(test_url = ""): Promise<boolean> {
-        const url = test_url !== "" ? test_url : this.cfg<string>("app_url");
+        const url = test_url !== "" ? test_url : process.env.CALLBACK_HOST ? process.env.CALLBACK_HOST : this.cfg<string>("app_url");
 
         Config.validateExternalURLRules(url);
 

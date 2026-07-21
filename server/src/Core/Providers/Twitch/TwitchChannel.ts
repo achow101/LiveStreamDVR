@@ -1061,10 +1061,7 @@ export class TwitchChannel extends BaseChannel {
             );
         }
 
-        let hookCallback = `${Config.getInstance().cfg(
-            "app_url",
-            ""
-        )}/api/v0/hook/twitch`;
+        let hookCallback = `${process.env.CALLBACK_HOST}/api/v0/hook/twitch`;
 
         if (Config.getInstance().hasValue("instance_id")) {
             hookCallback +=
