@@ -80,7 +80,7 @@
         "ws": "^8.13.0",
         "zod": "^3.22.4"
     },
-    "packageManager": "yarn@4.0.1",
+    "packageManager": "yarn@4.14.1",
     "engines": {
         "node": ">=20"
     },
