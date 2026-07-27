@@ -18,6 +18,7 @@ export const AppName = "LiveStreamDVR";
  * @test disable/mock
  */
 export const AppRoot =
+    argv.approot ? path.resolve(argv.approot) :
     process.env.NODE_ENV === "development"
         ? path.join(__dirname, "..", "..", "..")
         : path.join(__dirname, "..", "..");
